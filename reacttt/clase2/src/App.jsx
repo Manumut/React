@@ -19,6 +19,27 @@ function App() {
     color: 'white'
   }
 
+  let datos = [
+    {
+      id: 0,
+      titulo: 'Ayuda',
+      img: 'https://randomuser.me/api/portraits/women/13.jpg',
+      content: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA'
+    },
+    {
+      id: 1,
+      titulo: 'Miedo',
+      img: 'https://randomuser.me/api/portraits/women/68.jpg',
+      content: 'MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM'
+    },
+    {
+      id: 2,
+      titulo: 'Furbo',
+      img: 'https://randomuser.me/api/portraits/men/93.jpg',
+      content: 'SSSSSSSSSSSSIIIIIIIIIIIIIIIIIIIIIIIUUUUUUUUUUUUUUUUUUUUUUUUUUUU'                          
+    }
+  ]
+
   return (
     <>
       
@@ -41,17 +62,11 @@ function App() {
 
       <Botton titulo="Q T DEN"/> */}
 
-      <Card titulo="Ayuda" img="https://randomuser.me/api/portraits/women/13.jpg" estilo={estilo}>
-              <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
-      </Card>
-
-      <Card titulo="Miedo" img="https://randomuser.me/api/portraits/women/68.jpg"> 
-              <p>MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM</p>
-      </Card>
-      <Card titulo="Furbo" img="https://randomuser.me/api/portraits/men/93.jpg">
-              <p>SSSSSSSSSSSSIIIIIIIIIIIIIIIIIIIIIIIUUUUUUUUUUUUUUUUUUUUUUUUUUU</p>
-      </Card>
-
+      {
+        datos.map(dato =>{
+          return <Card key={dato.id} titulo={dato.titulo} img={dato.img} content={dato.content}/>
+        })
+      }
 
     </>
   )
