@@ -1,5 +1,6 @@
 import './App.css'
 import Botton from './components/Botton'
+import Card from './components/Card'
 import Contacto from './components/Contacto'
 import Home from './components/Home'
 
@@ -34,6 +35,8 @@ function App() {
       <Botton titulo="Eliminar"/>
 
       <Botton titulo="Q T DEN"/>
+
+      <Card />
 
     </>
   )

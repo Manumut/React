@@ -1,3 +1,9 @@
+.card{
+    border: solid 1px rgb(104, 153, 40);
+    padding: 10px;
+    text-align: center;
+}
+
 .container{
     display: flex;
     justify-content: center;

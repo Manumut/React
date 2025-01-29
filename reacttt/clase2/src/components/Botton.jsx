@@ -1,4 +1,4 @@
-import React from 'react'
+import css from './Botton.module.css'
 
 const Botton = ({titulo}) => {
   return (
