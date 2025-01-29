@@ -14,6 +14,11 @@ function App() {
   // .map unico elemento para recorrer un array
   let nums = [1, 2, 3, 4, 5]
 
+  let estilo={
+    backgroundColor: 'red',
+    color: 'white'
+  }
+
   return (
     <>
       
@@ -29,14 +34,24 @@ function App() {
 
         
       }
-      <Home />
+      {/* <Home />
       <Contacto />
       <Botton titulo="Mostrar"/>
       <Botton titulo="Eliminar"/>
 
-      <Botton titulo="Q T DEN"/>
+      <Botton titulo="Q T DEN"/> */}
 
-      <Card />
+      <Card titulo="Ayuda" img="https://randomuser.me/api/portraits/women/13.jpg" estilo={estilo}>
+              <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+      </Card>
+
+      <Card titulo="Miedo" img="https://randomuser.me/api/portraits/women/68.jpg"> 
+              <p>MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM</p>
+      </Card>
+      <Card titulo="Furbo" img="https://randomuser.me/api/portraits/men/93.jpg">
+              <p>SSSSSSSSSSSSIIIIIIIIIIIIIIIIIIIIIIIUUUUUUUUUUUUUUUUUUUUUUUUUUU</p>
+      </Card>
+
 
     </>
   )

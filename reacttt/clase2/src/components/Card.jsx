@@ -1,10 +1,14 @@
 import css from './Card.module.css'
-const Card = () => {
+import Botton from './Botton'
+const Card = ({titulo,img, children, estilo}) => {
+
+    
   return (
     <div className={css.card}>
-        <img src="" alt="" />
-        <h2>titulo</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium quae omnis nemo earum saepe molestias magnam quibusdam beatae illo quisquam!</p>
+        <img src={img} alt={titulo} />
+        <h2>{titulo}</h2>
+        {children}
+        <Botton titulo="Me Gusta" estilo={estilo}/>
     </div>
   )
 }

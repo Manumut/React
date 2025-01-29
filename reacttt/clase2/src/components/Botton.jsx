@@ -1,9 +1,9 @@
 import css from './Botton.module.css'
 
-const Botton = ({titulo}) => {
+const Botton = ({titulo, estilo}) => {
   return (
     <> 
-        <button>{titulo}</button>
+        <button style={estilo}>{titulo}</button>
     </>
   )
 }
