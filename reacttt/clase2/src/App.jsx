@@ -67,10 +67,14 @@ function App() {
   function cambio(c){
     if(c === 'red'){
       console.log(c)
+      c = "#f57272"
+      console.log(c)
       color = c;
       setColor (color);
       
     }else{
+      console.log(c)
+      c = "#72ddff"
       console.log(c)
       color = c;
       setColor (color);
