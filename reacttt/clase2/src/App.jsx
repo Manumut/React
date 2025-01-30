@@ -90,6 +90,8 @@ function App() {
       modo = m;
       setModo(modo);
     }else{
+      console.log(m)
+      m = "black"
       modo = m;
       setModo(modo);
     }
@@ -144,8 +146,8 @@ function App() {
 
 
 
-      <button onClick={() => {modo("oscuro")}}>Oscuro</button> 
-      <Hijo cambios={color}>
+      <button onClick={() => {cambiarModo("oscuro")}}>Oscuro</button> 
+      <Hijo cambios={modo}>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, exercitationem quis temporibus magnam facere tempora laudantium molestias maxime, optio sunt adipisci. Soluta repellat molestias cupiditate incidunt quidem perferendis cumque tempora.</p>
       </Hijo>
 
