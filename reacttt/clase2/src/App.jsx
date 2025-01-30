@@ -63,7 +63,7 @@ function App() {
   }
 
 
-  let [color, setColor] = useState();
+  let [color, setColor] = useState("#68e768");
   function cambio(c){
     if(c === 'red'){
       console.log(c)
