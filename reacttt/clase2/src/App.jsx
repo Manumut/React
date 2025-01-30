@@ -81,6 +81,20 @@ function App() {
     }
   }
 
+  // Un boton q al pincharle cambie a modo oscuro o modo claro
+  let [modo, setModo] = useState("white");
+  function cambiarModo(m){
+    if(m === "claro"){
+      console.log(m)
+      m = "white"
+      modo = m;
+      setModo(modo);
+    }else{
+      modo = m;
+      setModo(modo);
+    }
+  }
+// SIN TERMIAR
 
   return (
     <>
@@ -122,14 +136,18 @@ function App() {
       
 
 
-      <button onClick={() => {cambio("blue")}}>blue</button> 
+      {/* <button onClick={() => {cambio("blue")}}>blue</button> 
       <button onClick={() => {cambio("red")}}>red</button> 
       <Hijo cambios={color}>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, exercitationem quis temporibus magnam facere tempora laudantium molestias maxime, optio sunt adipisci. Soluta repellat molestias cupiditate incidunt quidem perferendis cumque tempora.</p>
+      </Hijo> */}
+
+
+
+      <button onClick={() => {modo("oscuro")}}>Oscuro</button> 
+      <Hijo cambios={color}>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, exercitationem quis temporibus magnam facere tempora laudantium molestias maxime, optio sunt adipisci. Soluta repellat molestias cupiditate incidunt quidem perferendis cumque tempora.</p>
       </Hijo>
-
-
-
 
 
 
