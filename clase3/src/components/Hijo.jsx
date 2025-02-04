@@ -1,13 +1,11 @@
 import { useState } from "react";
 
-const Hijo = (props) => {
+const Hijo = ({dameLogin}) => {
 
-    const [user, setUser] = useState("Diego");
 
-    // let {nombre} = props;
-
+    const nombre = "Diego"
     function mostrar(){
-        setUser(user);
+        dameLogin(nombre);
         
     }
     console.log(mostrar)
@@ -16,7 +14,6 @@ const Hijo = (props) => {
     <>
     <h2>Hola</h2>
         <button onClick= {mostrar}>login</button>
-        <h2>{user}</h2>
     </>
   )
 }

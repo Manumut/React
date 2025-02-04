@@ -31,7 +31,7 @@ function App() {
     /* {<Card estado = {estado} /> } */}
     {/* <button onClick={cambiar}>{estado ? "Desactivar" : "Activar"}</button> */}
 
-    <h2>Hola usuario </h2>
+    <h2>Hola usuario: {nombre} </h2>
     <Hijo dameLogin={login} />
 
     </>
