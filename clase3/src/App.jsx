@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Card from "./components/Card"
+import Hijo from "./components/Hijo";
 
 
 function App() {
@@ -15,6 +16,14 @@ function App() {
       setEstado(!estado);
   }
 
+  const [nombre, setNombre] = useState("");
+
+  let login = (nombre) => {
+    setNombre(nombre);
+  }
+
+  
+
   return (
     <>
     {/* <Card  users={user} /> */}
@@ -23,7 +32,7 @@ function App() {
     {/* <button onClick={cambiar}>{estado ? "Desactivar" : "Activar"}</button> */}
 
     <h2>Hola usuario </h2>
-    <button onClick >login</button>
+    <Hijo dameLogin={login} />
 
     </>
   )
