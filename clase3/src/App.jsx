@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Card from "./components/Card"
 import Hijo from "./components/Hijo";
+import Componente from "./Componente";
+import { use } from "react";
 
 
 function App() {
@@ -10,18 +12,23 @@ function App() {
   //   edad:"22"
   // }
 
-  const [estado, setEstado] = useState(true)
+  // const [estado, setEstado] = useState(true)
   
-  function cambiar() {
-      setEstado(!estado);
+  // function cambiar() {
+  //     setEstado(!estado);
+  // }
+
+  // const [nombre, setNombre] = useState("");
+
+  // let login = (nombre) => {
+  //   setNombre(nombre);
+  // }
+
+  const [estado, setEstado] = useState(true);
+  function ocultarMostrar() {    
+    setEstado(!estado);
+
   }
-
-  const [nombre, setNombre] = useState("");
-
-  let login = (nombre) => {
-    setNombre(nombre);
-  }
-
   
 
   return (
@@ -31,8 +38,11 @@ function App() {
     /* {<Card estado = {estado} /> } */}
     {/* <button onClick={cambiar}>{estado ? "Desactivar" : "Activar"}</button> */}
 
-    <h2>Hola usuario: {nombre} </h2>
-    <Hijo dameLogin={login} />
+    {/* <h2>Hola usuario: {nombre} </h2>
+    <Hijo dameLogin={login} /> */}
+
+    <button onClick={ocultarMostrar}>{estado ? "Ocultar" : "Mostrar"}</button>
+    {estado && <Componente />}
 
     </>
   )
