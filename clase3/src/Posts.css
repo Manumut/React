@@ -1,0 +1,16 @@
+.post{
+    min-height: 300px;
+    margin: 20px 0;
+    > div{
+        display: flex;
+        flex-flow: wrap;
+        a{
+            margin-top: auto;
+            border: none;
+            padding: 10px 20px;
+            background-color: royalblue;
+            color: white;
+            cursor: pointer;
+        }
+    }
+}

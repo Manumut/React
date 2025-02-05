@@ -3,6 +3,7 @@ import Card from "./components/Card"
 import Hijo from "./components/Hijo";
 import Componente from "./Componente";
 import { use } from "react";
+import Post from "./Post";
 
 
 function App() {
@@ -24,11 +25,13 @@ function App() {
   //   setNombre(nombre);
   // }
 
-  const [estado, setEstado] = useState(true);
-  function ocultarMostrar() {    
-    setEstado(!estado);
+  // const [estado, setEstado] = useState(true);
+  // function ocultarMostrar() {    
+  //   setEstado(!estado);
 
-  }
+  // }
+
+
   
 
   return (
@@ -41,9 +44,10 @@ function App() {
     {/* <h2>Hola usuario: {nombre} </h2>
     <Hijo dameLogin={login} /> */}
 
-    <button onClick={ocultarMostrar}>{estado ? "Ocultar" : "Mostrar"}</button>
-    {estado && <Componente />}
+    {/* <button onClick={ocultarMostrar}>{estado ? "Ocultar" : "Mostrar"}</button>
+    {estado && <Componente />} */}
 
+    <Post />
     </>
   )
 }
