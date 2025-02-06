@@ -1,17 +1,12 @@
 import React from 'react';
 
-const Buscador = ({ buscar, setBuscar }) => {
+const Buscador = ({ setFiltro }) => {
+    function cambiar(e) {{
+        setFiltro(e.target.value);
+    }}
     return (
-        <div className="row mb-4">
-            <div className="col-md-12">
-                <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Buscar por título..."
-                    value={search}
-                    onChange={(e) => setBuscar(e.target.value)} // Actualiza el estado de búsqueda
-                />
-            </div>
+        <div >
+            <input type="text" onChange={cambiar} className='form-control' placeholder='Filtrar por titulo'/>
         </div>
     );
 };

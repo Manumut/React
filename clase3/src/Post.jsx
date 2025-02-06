@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './Posts.css';
-import SearchBar from './SearchBar'; // Importar el componente de búsqueda
+import Buscador from './Buscador';
 
 const Post = () => {
     const [posts, setPosts] = useState([]);
-    const [search, setSearch] = useState(""); // Estado para el buscador
+    const [filtro, setFiltro] = useState(""); // Estado para el buscador
 
     useEffect(() => {
         // Llamada a la api
@@ -18,18 +18,20 @@ const Post = () => {
     }, []);
 
     // Filtra los posts según el valor del buscador
-    const filteredPosts = posts.filter(post =>
-        post.title.toLowerCase().includes(search.toLowerCase())
+    let entradasFiltradas = posts.filter(entrada =>
+        entrada.title.toLowerCase().includes(filtro.toLowerCase())
     );
 
     return (
         <>
-            <div className="container border p-5 ">
-                {/* Componente SearchBar */}
-                <SearchBar search={search} setSearch={setSearch} /> {/* Usar el componente de búsqueda */}
-                
+            
+            <div className="container border p-5 ">                
                 <div className="row p-4">
-                    {filteredPosts.map(post => (
+
+                <div className="col-md-12">
+                    <Buscador setFiltro={setFiltro}/>
+                </div>
+                    {entradasFiltradas.map(post => (
                         <div className="col-md-4" key={post.id}>
                             <div className="card post">
                                 <div className="card-body">
