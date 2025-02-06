@@ -4,7 +4,11 @@ import Hijo from "./components/Hijo";
 import Componente from "./Componente";
 import { use } from "react";
 import Post from "./Post";
-
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home"; 
+import Contact from "./pages/Contact";
+import Soporte from "./pages/Soporte";
+import Nav from "./components/Nav";
 
 function App() {
   
@@ -47,7 +51,15 @@ function App() {
     {/* <button onClick={ocultarMostrar}>{estado ? "Ocultar" : "Mostrar"}</button>
     {estado && <Componente />} */}
 
-    <Post />
+    {/* <Post /> */}
+
+    <Nav />
+    <Routes>
+      <Route path="/" element={<Home />}/>
+      <Route path="/contact" element={<Contact />}/>
+      <Route path="/soporte" element={<Soporte />}/>
+
+    </Routes>
     </>
   )
 }
