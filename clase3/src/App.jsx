@@ -8,6 +8,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home"; 
 import Contact from "./pages/Contact";
 import Soporte from "./pages/Soporte";
+import Error from "./pages/Error";
 import Nav from "./components/Nav";
 
 function App() {
@@ -58,7 +59,7 @@ function App() {
       <Route path="/" element={<Home />}/>
       <Route path="/contact" element={<Contact />}/>
       <Route path="/soporte" element={<Soporte />}/>
-
+      <Route path="*" element={<Error/>}/>
     </Routes>
     </>
   )

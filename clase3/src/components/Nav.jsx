@@ -13,6 +13,8 @@ const Nav = () => {
             <li><Link to ="/">Home</Link></li>
             <li><Link to ="/contact">Contacto</Link></li>
             <li><Link to ="/soporte">Soporte</Link></li>
+            <li><Link to ="/error">Error</Link></li>
+
         </ul>
     </nav>
     </>
